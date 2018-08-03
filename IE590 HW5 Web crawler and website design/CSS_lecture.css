@@ -1,0 +1,153 @@
+﻿/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background-image: url("website back.png");
+	width:1000px;
+	font-family: Georgia;
+	opacity: 0.9;
+	margin-bottom: 40px;
+}
+
+#wrapper {
+	width: 1000px;
+	background-color: #FFCC66;
+	width:1300px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px;
+	
+}
+
+#header{
+ width: 1000px; height: 80px;
+ text-align: center;
+}
+
+#header h1{
+ padding-left:25px;
+ font: 3em georgia, sans-serif;
+}
+
+.redtext{
+ color: #DE2220;
+}
+
+#menu{
+ float: left;
+ width: 200px;
+ padding-top: 1px;
+ text-align: left;
+ background: #eee;
+}
+
+#home{
+ float: left;
+ width: 1095px;
+ padding-top: 1px;
+ text-align: left;
+ background-color: #FFCC66;
+}
+#menu ul{
+ list-style: none;
+ font-size: 1em;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#menu ul li{
+ display: block;
+ margin: 0 0 1px 0;
+ padding: 3px;
+ background: #fff;
+ background-color: #FFCC66;
+}
+
+#home{
+ float: left;
+ width: 1095px;
+ border-left: 4px #ccc solid;
+ border-top: 1px #ccc solid;
+ text-align: left;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#menu ul li:hover{
+ margin: 0 0 1px 0;
+ padding: 2px 3px 2px 3px;
+ border-top: 1px #ccc solid;
+ border-bottom: 1px #ccc solid;
+ background: #fff;
+ background-color: #FF6600;
+}
+
+#menu ul li a{
+ display: block;
+ color: #DE2220;
+ text-decoration: none;
+}
+
+#menu ul li a:hover{
+ color: black;
+}
+
+#menu ul li.selected a{
+ color: #000;
+}
+
+
+
+#home h3, #home h2{
+ color: #000;
+ margin: 1em 0 0 1em;
+ padding: 0 0 .4em 0;
+ border-bottom: 1px #ddd solid;
+ font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+
+#home h2 {
+ font-size: 2.0em;
+
+}
+
+
+#content a{
+ color: black;
+ text-decoration: none;
+ border-bottom: 1px solid #DE2220;
+}
+
+#content a.no_underline {
+	border: none;
+}
+
+#content a:hover{
+ color: #DE2220;
+ text-decoration: none;
+ border-bottom: 0;
+}
+
+
+#content img {
+	padding: 10px 0;
+}
+
+acronym{
+ border-bottom: 1px #000 dotted;
+ cursor: help;
+}
+
+ul.lecture_notes li,
+ul.links li,
+ul.assignments li,
+ul.tests li,
+ul.help li,
+ul.news li {
+	list-style-type:none;
+	padding: 10px 0 0 30px;
+}

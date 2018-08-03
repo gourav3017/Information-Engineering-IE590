@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="Q1 News.css" />
+	<title>IE 590 Information Engineering</title>
+
+<script>
+function myfunction(){
+document.getElementById("h11").innerHTML="The script is in the head element";}
+
+function Politics(){
+    var para = document.createElement("BUTTON");
+	para.setAttribute("class","button");
+	para.setAttribute("onclick","National()");
+    var t = document.createTextNode("National News");
+    para.appendChild(t);
+	var k = document.body.appendChild(para);
+	document.getElementById("Pol").appendChild(k);
+	
+	var inter = document.createElement("BUTTON");
+	inter.setAttribute("class","button");
+	inter.setAttribute("onclick","International()");
+    var t = document.createTextNode("International News");
+    inter.appendChild(t);
+	var l = document.body.appendChild(inter);
+	document.getElementById("Pol").appendChild(l);
+    }
+
+	function Finance(){
+    var para = document.createElement("BUTTON");
+	para.setAttribute("class","button");
+	para.setAttribute("onclick","Sector()");
+    var t = document.createTextNode("Sector News");
+    para.appendChild(t);
+	var k = document.body.appendChild(para);
+	document.getElementById("Fin").appendChild(k);
+	
+	var inter = document.createElement("BUTTON");
+	inter.setAttribute("class","button");
+	inter.setAttribute("onclick","Stock()");
+    var t = document.createTextNode("Get Stock News");
+    inter.appendChild(t);
+	var l = document.body.appendChild(inter);
+	document.getElementById("Fin").appendChild(l);
+    }
+	
+	function National(){
+    var para = document.createElement("BUTTON");
+	para.setAttribute("class","button");
+	para.setAttribute("onclick","location.href='https://www.nytimes.com/2018/02/28/us/politics/trump-gun-control.html'");
+    var t = document.createTextNode("Trump");
+    para.appendChild(t);
+	var k = document.body.appendChild(para);
+	document.getElementById("Nat").appendChild(k);
+	
+	var inter = document.createElement("BUTTON");
+	inter.setAttribute("class","button");
+	inter.setAttribute("onclick","location.href='https://www.cnn.com/specials/politics/congress-capitol-hill'");
+    var t = document.createTextNode("Congress");
+    inter.appendChild(t);
+	var l = document.body.appendChild(inter);
+	document.getElementById("Nat").appendChild(l);
+	
+	var inte = document.createElement("BUTTON");
+	inte.setAttribute("class","button");
+	inte.setAttribute("onclick","location.href='http://www.nydailynews.com/'");
+    var ti = document.createTextNode("New York");
+    inte.appendChild(ti);
+	var li = document.body.appendChild(inte);
+	document.getElementById("Nat").appendChild(li);
+    }
+	
+	function International(){
+    var para = document.createElement("BUTTON");
+	para.setAttribute("class","button");
+	para.setAttribute("onclick","location.href='http://www.bbc.com/news/world/asia'");
+    var t = document.createTextNode("Asia");
+    para.appendChild(t);
+	var k = document.body.appendChild(para);
+	document.getElementById("Inter").appendChild(k);
+	
+	var inter = document.createElement("BUTTON");
+	inter.setAttribute("class","button");
+	inter.setAttribute("onclick","location.href='http://www.bbc.com/news/uk'");
+    var t = document.createTextNode("Europe");
+    inter.appendChild(t);
+	var l = document.body.appendChild(inter);
+	document.getElementById("Inter").appendChild(l);
+	
+	var inte = document.createElement("BUTTON");
+	inte.setAttribute("class","button");
+	inte.setAttribute("onclick","location.href='https://www.bbc.co.uk/search?q=africa'");
+    var ti = document.createTextNode("Africa");
+    inte.appendChild(ti);
+	var li = document.body.appendChild(inte);
+	document.getElementById("Inter").appendChild(li);
+    }
+	
+	function Sector(){
+    var para = document.createElement("BUTTON");
+	para.setAttribute("class","button");
+	para.setAttribute("onclick","location.href='http://www.bbc.com/news/technology'");
+    var t = document.createTextNode("Tech");
+    para.appendChild(t);
+	var k = document.body.appendChild(para);
+	document.getElementById("Sect").appendChild(k);
+	
+	var inter = document.createElement("BUTTON");
+	inter.setAttribute("class","button");
+	inter.setAttribute("onclick","location.href='https://www.investopedia.com/terms/q/qsbs-qualified-small-business-stock.asp'");
+    var t = document.createTextNode("Business");
+    inter.appendChild(t);
+	var l = document.body.appendChild(inter);
+	document.getElementById("Sect").appendChild(l);
+	
+	var inte = document.createElement("BUTTON");
+	inte.setAttribute("class","button");
+	inte.setAttribute("onclick","location.href='https://money.usnews.com/investing/stocks/engineering-construction'");
+    var ti = document.createTextNode("Construction");
+    inte.appendChild(ti);
+	var li = document.body.appendChild(inte);
+	document.getElementById("Sect").appendChild(li);
+    }
+	
+	function Stock(){
+    var para = document.createElement("BUTTON");
+	para.setAttribute("class","button");
+	para.setAttribute("onclick","location.href='https://www.nasdaq.com/symbol/aapl/real-time'");
+    var t = document.createTextNode("Apple");
+    para.appendChild(t);
+	var k = document.body.appendChild(para);
+	document.getElementById("Stoc").appendChild(k);
+	
+	var inter = document.createElement("BUTTON");
+	inter.setAttribute("class","button");
+	inter.setAttribute("onclick","location.href='https://www.nasdaq.com/symbol/googl'");
+    var t = document.createTextNode("Google");
+    inter.appendChild(t);
+	var l = document.body.appendChild(inter);
+	document.getElementById("Stoc").appendChild(l);
+	
+	var inte = document.createElement("BUTTON");
+	inte.setAttribute("class","button");
+	inte.setAttribute("onclick","location.href='https://www.nasdaq.com/symbol/msft/real-time'");
+    var ti = document.createTextNode("Microsoft");
+    inte.appendChild(ti);
+	var li = document.body.appendChild(inte);
+	document.getElementById("Stoc").appendChild(li);
+    }
+</script>
+</head>
+<body>
+<h1 id="h11"><center> Curating News<center></h1>
+
+ 
+ <div id="wrapper" class="flex-container">
+  <div id="wrapper1">
+  <button onclick="Politics()" class="button">Politics </button></br></br></br></br></br>
+  <button onclick="Finance()" class="button">Finance</button>
+  </div>
+  <div id="wrapper2">
+  <div id="Pol">
+   </div> 
+  <div id="Fin">
+   </div>
+   </div>
+   <div id="wrapper3">
+  <div id="Nat">
+   </div> 
+  <div id="Inter">
+   </div>
+    <div id="Sect">
+   </div> 
+  <div id="Stoc">
+   </div>
+   
+   </div>
+   </div>
+
+ 
+</body>
+</html>

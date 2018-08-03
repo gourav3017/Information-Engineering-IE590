@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+table {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border-collapse: collapse;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+/* Darker background-color on hover */
+table tr:hover {
+  background: #ddd;
+}
+tr:first-child:hover {
+    background-color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #FFD700;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input[type=text]{
+  border: none;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+input[type=date]{
+  border: none;
+  margin: 0px 10px;
+  width: 15%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.rando {
+  background: ;
+ }
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #ff8c00;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+</style>
+</head>
+<body>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">Create your own To Do List</h2>
+  <input type="text" id="myInput" placeholder="Please enter the task here">
+  <input id="mydate" type="date">
+  <span onclick="newElement()" class="addBtn">Add</span>
+  <span onclick="removeSampleRow()" class = "addBtn">Complete</span>
+  
+</div>
+<table id="mytable">
+	<tr>
+		<th>Check</th>
+		<th>Created</th>
+		<th>Task</th>
+		<th>Deadline</th>
+	</tr>
+</table>	
+
+<script>
+// Create a "close" button and append it to each list item
+
+function removeSampleRow() {
+    /***We get the table object based on given id ***/
+	//alert("You're deleting");
+    var objTable = document.getElementById("mytable");
+    /*** Get the current row length ***/
+    var iRow = objTable.rows.length;
+	/*** Initial row counter ***/
+	var counter = 0;
+
+    /*** Performing a loop inside the table ***/
+		for (var i = 1; i < iRow; i++) {
+
+			 /*** Get checkbox object ***/
+			var chk = objTable.rows[i].cells[0].childNodes[0];
+			if (chk.checked) {
+				/*** if checked we del ***/
+				objTable.deleteRow(i);
+				iRow--;
+				i--;
+				counter = counter + 1;
+			}
+		}
+
+		/*** Alert user if there is now row is selected to be deleted ***/
+		if (counter == 0) {
+			alert("Please select the row that you want to delete.");
+		}
+}
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+// Find a <table> element with id="myTable":
+	var inputValue = document.getElementById("myInput").value;
+	var inputdate = document.getElementById("mydate").value;
+	var table = document.getElementById("mytable");
+	var date = new Date();
+	
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else if (inputdate == ''){
+	alert("You must enter date");
+  } else {
+// Create an empty <tr> element and add it to the 1st position of the table:
+	var row = table.insertRow(1);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+	var cell3 = row.insertCell(2);
+	var cell4 = row.insertCell(3); 
+
+// Add some text to the new cells:
+	cell2.innerHTML = date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate();
+	cell3.innerHTML = inputValue;
+	cell4.innerHTML = inputdate;
+// We  insert a checkbox object
+	var objInputCheckBox = document.createElement("input");
+    objInputCheckBox.type = "checkbox";
+    cell1.appendChild(objInputCheckBox);
+	date.setHours(0,0,0,0);
+	idate = Date.parse(inputdate);
+	tdate = Date.parse(date);
+	ddiff = Math.round((idate - tdate) / (1000*3600*24));
+	if (ddiff >= 3) {
+		row.style.backgroundColor = "violet";
+	} else if (ddiff <= -3) {
+		row.style.backgroundColor = "red";
+	} else {
+		sdiff = ddiff + 2;
+		switch(sdiff) {
+			case 0:
+				row.style.backgroundColor = "orange";
+				break;
+			case 1:
+				row.style.backgroundColor = "yellow";
+				break;
+			case 2:
+				row.style.backgroundColor = "green";
+				break;
+			case 3:
+				row.style.backgroundColor = "blue";
+				break;
+			case 4:
+				row.style.backgroundColor = "indigo";
+				break;
+		}
+	}
+				
+  }
+  document.getElementById("myInput").value = "";
+  document.getElementById("mydate").value = "";
+  
+}
+</script>
+
+</body>
+</html>

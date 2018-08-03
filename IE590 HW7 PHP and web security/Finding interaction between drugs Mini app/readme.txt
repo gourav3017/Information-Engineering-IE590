@@ -1,0 +1,1 @@
+Run Q1 sol.php file to get the output

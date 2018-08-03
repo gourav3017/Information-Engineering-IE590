@@ -1,0 +1,92 @@
+/* CSS Document */
+
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+  width:1100px;
+}
+.flex-container > div {
+  width: 600px;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+body {
+  background-image:url("Marketplace-Lending-News-1.jpg");
+}
+#wrapper1 {
+	width: 100px;
+	height: 300px;
+	
+	padding: 20px;	
+}
+
+#wrapper2 {
+	width: 200px;
+	height: 300px;
+	
+	padding: 20px;	
+}
+#Pol {
+	width: 200px;
+	height: 150px;
+	
+	margin:10px;
+	
+}
+#Fin {
+	width: 200px;
+	height: 150px;
+	margin:10px;
+}
+
+#wrapper3 {
+	width: 500px;
+	height: 300px;
+	
+	padding: 20px;	
+}
+#Nat {
+	width: 400px;
+	height: 50px;
+	
+	margin:10px;
+	
+}
+
+#Inter {
+	width: 400px;
+	height: 50px;
+	margin:10px;
+	
+}
+
+#Sect {
+	
+	width: 400px;
+	height: 50px;
+	margin:10px;
+	margin-top:40px;
+	
+}
+
+#Stoc {
+	
+	width: 400px;
+	height: 50px;
+	margin:10px;
+	
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
